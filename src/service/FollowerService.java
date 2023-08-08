@@ -11,9 +11,15 @@ public class FollowerService {
             String followerName = scanner.nextLine();
             System.out.println("Email:");
             String followerEmail = scanner.nextLine();
-            System.out.println("Số lượt like:");
-            int numberOfLike = Integer.parseInt(scanner.nextLine());
-
-        return new Follower(followerName, followerEmail, numberOfLike);
+            do {
+                System.out.println("Số lượt like:");
+                int numberOfLike = Integer.parseInt(scanner.nextLine());
+                if (numberOfLike < 0) {
+                    System.out.println("Số lượt like không được phép âm, mời nhập lại!");
+                    continue;
+                }
+                return new Follower(followerName, followerEmail, numberOfLike);
+            }
+            while(true);
     }
 }

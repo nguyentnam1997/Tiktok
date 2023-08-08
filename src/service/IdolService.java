@@ -15,13 +15,21 @@ public class IdolService {
         String idolEmail = scanner.nextLine();
         System.out.println("Group mà idol đang tham gia:");
         String group = scanner.nextLine();
-        System.out.println("Mời nhập số người theo dõi idol:");
-        int countFollower = Integer.parseInt(scanner.nextLine());
-
-        for (int i = 0; i < countFollower; i++) {
-            System.out.println("======= Người thứ " + (i + 1) + " =======");
-            followers.add(followerService.inputFollower(scanner, countFollower));
+        do {
+            System.out.println("Mời nhập số người theo dõi idol:");
+            int countFollower = Integer.parseInt(scanner.nextLine());
+            if (countFollower < 0) {
+                System.out.println("Số người theo dõi không được phép âm, mời nhập lại!");
+                continue;
+            }
+            for (int i = 0; i < countFollower; i++) {
+                System.out.println("======= Người thứ " + (i + 1) + " =======");
+                followers.add(followerService.inputFollower(scanner, countFollower));
+            }
+            return new Idol(idolName, idolEmail, followers, group);
         }
-        return new Idol(idolName, idolEmail, followers, group);
+        while (true);
+
+
     }
 }
