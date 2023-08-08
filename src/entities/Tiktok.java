@@ -26,4 +26,12 @@ public class Tiktok {
     public void setSongs(ArrayList<Song> songs) {
         this.songs = songs;
     }
+
+    @Override
+    public String toString() {
+        return "Tiktok{" +
+                "idols=" + idols +
+                ", songs=" + songs +
+                '}';
+    }
 }

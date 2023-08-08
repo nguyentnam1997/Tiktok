@@ -40,4 +40,14 @@ public class Follower {
     public void setNumberOfLike(int numberOfLike) {
         this.numberOfLike = numberOfLike;
     }
+
+    @Override
+    public String toString() {
+        return "Follower{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", numberOfLike=" + numberOfLike +
+                '}';
+    }
 }

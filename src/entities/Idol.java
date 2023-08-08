@@ -52,4 +52,15 @@ public class Idol {
     public void setGroup(String group) {
         this.group = group;
     }
+
+    @Override
+    public String toString() {
+        return "Idol{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", followers=" + followers +
+                ", group='" + group + '\'' +
+                '}';
+    }
 }
