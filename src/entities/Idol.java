@@ -55,12 +55,10 @@ public class Idol {
 
     @Override
     public String toString() {
-        return "Idol{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", followers=" + followers +
-                ", group='" + group + '\'' +
-                '}';
+        return "Idol thứ " + id +
+                ": tên = " + name +
+                ", email = " + email +
+                ", danh sách follower: " + followers +
+                ", group = " + group;
     }
 }

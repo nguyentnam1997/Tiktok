@@ -43,11 +43,9 @@ public class Follower {
 
     @Override
     public String toString() {
-        return "Follower{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", numberOfLike=" + numberOfLike +
-                '}';
+        return "Follower thứ " + id +
+                ": name = " + name +
+                ", email= " + email +
+                ", lượt thích = " + numberOfLike;
     }
 }

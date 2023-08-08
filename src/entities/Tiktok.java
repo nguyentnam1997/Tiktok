@@ -29,9 +29,8 @@ public class Tiktok {
 
     @Override
     public String toString() {
-        return "Tiktok{" +
-                "idols=" + idols +
-                ", songs=" + songs +
-                '}';
+        return "Tiktok {" +
+                "Danh sách idols: " + idols +
+                ". Danh sách songs: " + songs;
     }
 }
